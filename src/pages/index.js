@@ -11,7 +11,7 @@ const IndexPage = ({data}) => (
     <h2>Posts:</h2>
     {data.allWordpressPost.edges.map(({node}, index) => (
       <div key={index}>
-        <p><Link to={`/${node.slug}`}>{node.title}</Link></p>
+        <p><Link to={`${node.slug}`}>{node.title}</Link></p>
         <div dangerouslySetInnerHTML={{ __html: node.excerpt }}></div>
       </div>
     ))}
